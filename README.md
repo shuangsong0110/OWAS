@@ -134,7 +134,7 @@ Clone this repository using the following git command:
 
 $ git clone https://github.com/shuangsong0110/OWAS.git
 
-$ cd ./NeuPred
+$ cd ./OWAS
 
 $ wget https://data.broadinstitute.org/alkesgroup/LDSCORE/1000G_Phase3_plinkfiles.tgz
 
