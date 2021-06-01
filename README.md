@@ -150,6 +150,7 @@ $ tar -zxvf openness.tar.gz
 Run with R:
 
 ```r
+install.packages('OWAS_1.0.0.tar.gz')
 library(OWAS)
 path0 <- getwd()
 pre.cov(ldpath = paste0(path0, '/1000G_EUR_Phase3_plink/1000G.EUR.QC.'), 
@@ -169,6 +170,8 @@ res <- run.owas(ctype = 'Gm12878',
 	ldpath = paste0(path0, '/1000G_EUR_Phase3_plink/1000G.EUR.QC.'), 
 	path = paste0(path0, '/output/'), 
 	chr = 22)
+	
+head(res)
              
 ```
 
