@@ -39,7 +39,7 @@ devtools::install_github('shuangsong0110/OWAS')
 ### Download the pre-computed openness scores:
 
 - Download the precomputed openness scores for 123 ENCODE cell types.
-`wget `
+`wget -O openness.tar.gz https://cloud.tsinghua.edu.cn/f/17d8b0b5de3941a2bf86/?dl=1`
 
 We precomputed openness scores for 123 ENCODE cell types using deltaSVM (Lee et al., 2015, Nature Genetics). 
 
@@ -142,7 +142,7 @@ $ tar -xvzf 1000G_Phase3_plinkfiles.tgz
 
 $ wget -O bedfile_5kb.txt https://cloud.tsinghua.edu.cn/f/7524fb35b88c468dbc02/?dl=1
 
-$ wget -O openness.tar.gz
+$ wget -O openness.tar.gz https://cloud.tsinghua.edu.cn/f/17d8b0b5de3941a2bf86/?dl=1
 
 $ tar -zxvf openness.tar.gz
 
@@ -199,7 +199,7 @@ We also allow users to customize the openness scores, besides our precomputed 12
     ...
 ```
 
-The users should specify a name for the annotation (e.g., `newct`), and create a new folder in the `/openness/` file, and save 22 files as `result_1_newct.txt`, `result_2_newct.txt`, ... , `result_22_newct.txt`.
+The users should specify a name for the annotation (e.g., `newct`), and create a new folder in the `/openness/` file as `/openness/newct/`, and save 22 files as `result_1_newct.txt`, `result_2_newct.txt`, ... , `result_22_newct.txt`.
 
 
 
@@ -214,4 +214,3 @@ Please cite:
 
 Song, S., Shan N., Wang G., Yan X., Liu, J. & Hou, L. Openness Weighted Association Studies: Leveraging Personal Genome Information to Prioritize Noncoding Variants. *Submitted*, 2021.
 
-Lee D, Gorkin D U, Baker M, et al. A method to predict the impact of regulatory variants from DNA sequence[J]. Nature genetics, 2015, 47(8): 955.
