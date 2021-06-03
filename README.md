@@ -38,10 +38,10 @@ devtools::install_github('shuangsong0110/OWAS')
 
 ### Download the pre-computed openness scores:
 
-- Download the precomputed openness scores for 123 ENCODE cell types.
+- Download the precomputed openness scores for 12 ENCODE cell types.
 `wget -O openness.tar.gz https://cloud.tsinghua.edu.cn/f/17d8b0b5de3941a2bf86/?dl=1`
 
-We precomputed openness scores for 123 ENCODE cell types using deltaSVM (Lee et al., 2015, Nature Genetics). 
+We precomputed openness scores for 12 ENCODE cell types using deltaSVM (Lee et al., 2015, Nature Genetics). 
 
 ### Download the bedfile for segments:
 
@@ -79,7 +79,7 @@ pre.sc(ctype=CELLTYPE (required, can be specified, or simply 'all'),
 ```
 
 
-- CELLTYPE (required): We provided 123 precomputed openness scores in `/openness/` file, if the users hope to specify the openness scores for certain cell types, please see [Customized Settings](#customized-settings).
+- CELLTYPE (required): We provided 12 precomputed openness scores in `/openness/` file, if the users hope to specify the openness scores for certain cell types, please see [Customized Settings](#customized-settings).
 
 - PATH_TO_OPENNESS_SCORE_FILES: The PATH to the openness scores files. e.g., `scpath=PATH/openness/`
 
@@ -190,7 +190,7 @@ We prepared the bed file taking 100 KB up and down-stream from the transcription
 
 ### Openness scores (or other annotation weights)
 
-We also allow users to customize the openness scores, besides our precomputed 123 cell lines. The used could write the scores in the following format (with each chromosme):
+We also allow users to customize the openness scores, besides our precomputed 12 cell lines. The used could write the scores in the following format (with each chromosme):
 ```
       rsid          score         a1    a2    
    rs4040617          2.3         G     A   
