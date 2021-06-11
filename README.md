@@ -1,7 +1,7 @@
 # OWAS `v1.0.1`
 
 Update 2021.6.9:
-1. Add the `make.bed` function, which allows customized segment length and regulatory regions.
+1. Add the `write.bed` function, which allows customized segment length and regulatory regions.
 
 Update 2021.6.1:
 1. Update the R package and greatly improve the computational efficiency.
@@ -191,12 +191,12 @@ We prepared the bed file taking 100 KB up and down-stream from the transcription
     ...
 ```
 
-The bedfiles can also be generated with function `make.bed` in our R package. The usage is:
+The bedfiles can also be generated with function `write.bed` in our R package. The usage is:
 
 ```r
 library(OWAS)
 ldpath=NULL, path,type.len='len',len=5,type.gene='gene',gene.region=NULL
-make.bed(ldpath=PATH_TO_LD_REFERENCE (required), 
+write.bed(ldpath=PATH_TO_LD_REFERENCE (required), 
 	    path=OUTPUT_DIR (required),
 	    type.len='len'/'snp' (default = 'len'),
 	    len=LENGTH OF SEGMENTS (KB)/ NUMBER OF SNPS (default = 5),
