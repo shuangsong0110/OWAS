@@ -1,4 +1,7 @@
-# OWAS `v1.0.0`
+# OWAS `v1.0.1`
+
+Update 2021.6.9:
+1. Add the `make.bed` function, which allows customized segment length and regulatory regions.
 
 Update 2021.6.1:
 1. Update the R package and greatly improve the computational efficiency.
@@ -150,7 +153,7 @@ $ tar -zxvf openness.tar.gz
 Run with R:
 
 ```r
-install.packages('OWAS_1.0.0.tar.gz')
+install.packages('OWAS_1.0.1.tar.gz')
 library(OWAS)
 path0 <- getwd()
 pre.cov(ldpath = paste0(path0, '/1000G_EUR_Phase3_plink/1000G.EUR.QC.'), 
@@ -187,6 +190,39 @@ We prepared the bed file taking 100 KB up and down-stream from the transcription
     1       58774864    58779863       DDX11L1         3
     ...
 ```
+
+The bedfiles can also be generated with function `make.bed` in our R package. The usage is:
+
+```r
+library(OWAS)
+ldpath=NULL, path,type.len='len',len=5,type.gene='gene',gene.region=NULL
+make.bed(ldpath=PATH_TO_LD_REFERENCE (required), 
+	    path=OUTPUT_DIR (required),
+	    type.len='len'/'snp' (default = 'len'),
+	    len=LENGTH OF SEGMENTS (KB)/ NUMBER OF SNPS (default = 5),
+	    type.gene='gene'/'wg' (default=gene),
+	    gene.region= GENE TSS (required if type.gene='gene'))                    
+```
+- PATH_TO_LD_REFERENCE (required): The LD reference plink bfile should be dividied into chromosomes and ended with the number of the chromosome. The input should include the file name but not the exact number of chromosome (e.g., ldpath='path/1000G.EUR.QC.', without .bim/.fam/.bed).
+
+- OUTPUT_DIR (required): path to the output
+
+- type.len: if type.len='len', the function will divide regions into segments with given length (len, KB). If type.len='snp', the function will divide regions into segments with 'len' SNPs in each segment.
+
+- type.gene: if type.gene='gene', the function only focus on gene regulatory region; if type.gene='wg', the funciton will run in the whole genome.
+
+- gene.region: A data.frame with the format below (with no header) , which can be downloaded directly with `wget -O gene.region.txt https://cloud.tsinghua.edu.cn/f/801fcbf2609a4283a26b/?dl=1`
+
+```
+      V1          V2          V3        V4    
+    chr1         12314      12516     gene1   
+    chr1         12872      12900     gene2    
+    chr1         31592      34000     gene3    
+    ...
+```
+
+
+
 
 ### Openness scores (or other annotation weights)
 
