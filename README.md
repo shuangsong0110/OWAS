@@ -108,7 +108,7 @@ Prepare the summary statistics in the following format (including the header lin
     ...
 ```
 
-where rsid is the SNP, a1 is the effect allele, a2 is the alternative allele, z is the z scores of the a1 allele, p is the p-value of the effect. 
+where rsid is the SNP, a1 is the reference allele, a2 is the alternative allele, z is the z scores of the a1 allele, p is the p-value of the effect. 
 
 
 ## Output
