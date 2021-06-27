@@ -9,7 +9,7 @@ Update 2021.6.1:
 
 ## Introduction
 
-**OWAS** is an R implementation of a  computational approach, Openness Weighted Association Studies(OWAS), which leverages and aggregates predictions of chromosome accessibility in personal genomes to prioritize GWAS signals unified Bayesian framework for polygenic risk scores construction.
+**OWAS** is an R implementation of a  computational approach, Openness Weighted Association Studies(OWAS), which leverages and aggregates predictions of chromosome accessibility in personal genomes to prioritize GWAS signals.
 
 Song, S., Shan N., Wang G., Yan X., Liu, J. & Hou, L. Openness Weighted Association Studies: Leveraging Personal Genome Information to Prioritize Noncoding Variants. *Submitted*, 2021.
 
