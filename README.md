@@ -248,5 +248,5 @@ Please contact Shuang Song (song-s19@mails.tsinghua.edu.cn) if there are any pro
 
 Please cite:
 
-Song, S., Shan N., Wang G., Yan X., Liu, J. & Hou, L. Openness Weighted Association Studies: Leveraging Personal Genome Information to Prioritize Noncoding Variants. *Submitted*, 2021.
+Song, S., Shan, N., Wang, G., Yan, X., Liu, J. S., & Hou, L. (2021). Openness weighted association studies: leveraging personal genome information to prioritize non-coding variants. Bioinformatics.
 
