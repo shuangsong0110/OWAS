@@ -1,6 +1,7 @@
 # OWAS `v1.1.0`
 Update 2021.12.1
 1. Add the option for clumping GWAS summary statistics, to aviod high collinearity.
+2. Bug fixes.
 
 Update 2021.6.9:
 1. Add the `write.bed` function, which allows customized segment length and regulatory regions.
@@ -13,7 +14,6 @@ Update 2021.6.1:
 
 **OWAS** is an R implementation of a  computational approach, Openness Weighted Association Studies(OWAS), which leverages and aggregates predictions of chromosome accessibility in personal genomes to prioritize GWAS signals.
 
-Song, S., Shan N., Wang G., Yan X., Liu, J. & Hou, L. Openness Weighted Association Studies: Leveraging Personal Genome Information to Prioritize Noncoding Variants. *Submitted*, 2021.
 
 
 ## Table of contents
@@ -96,7 +96,8 @@ run.owas(ctype=CELLTYPE (required),
 	   trait=NAME_OF_THE_TRAIT (optional, default='test'),
 	   ldpath=PATH_TO_LD_REFERENCE (required), 
 	   path=OUTPUT_DIR (required, and has to be same with the PATH in get.cov),
-	   chr=CHROMOSOME (optional))                           
+	   chr=CHROMOSOME (optional),
+	   plinkpath= PATH_TO_PLINK_software (required))
 ```
 
 
