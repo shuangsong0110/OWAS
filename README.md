@@ -1,4 +1,6 @@
-# OWAS `v1.0.1`
+# OWAS `v1.1.0`
+Update 2021.12.1
+1. Add the option for clumping GWAS summary statistics, to aviod high collinearity.
 
 Update 2021.6.9:
 1. Add the `write.bed` function, which allows customized segment length and regulatory regions.
@@ -143,9 +145,9 @@ $ wget https://data.broadinstitute.org/alkesgroup/LDSCORE/1000G_Phase3_plinkfile
 
 $ tar -xvzf 1000G_Phase3_plinkfiles.tgz
 
-$ wget -O bedfile_5kb.txt https://cloud.tsinghua.edu.cn/f/7524fb35b88c468dbc02/?dl=1
+$ wget -O bedfile_5kb.txt https://cloud.tsinghua.edu.cn/f/7524fb35b88c468dbc02/?dl=1 --no-check-certificate
 
-$ wget -O openness.tar.gz https://cloud.tsinghua.edu.cn/f/17d8b0b5de3941a2bf86/?dl=1
+$ wget -O openness.tar.gz https://cloud.tsinghua.edu.cn/f/17d8b0b5de3941a2bf86/?dl=1 --no-check-certificate
 
 $ tar -zxvf openness.tar.gz
 
@@ -153,11 +155,11 @@ $ tar -zxvf openness.tar.gz
 Run with R:
 
 ```r
-install.packages('OWAS_1.0.1.tar.gz')
+install.packages('OWAS_1.1.0.tar.gz')
 library(OWAS)
 path0 <- getwd()
 pre.cov(ldpath = paste0(path0, '/1000G_EUR_Phase3_plink/1000G.EUR.QC.'), 
-	bedfile = paste0(path0, '/bedfiles/bedfile.5kb.txt'), 
+	bedfile = paste0(path0, '/bedfiles/bedfile_5kb.txt'), 
 	path = paste0(path0, '/output/'),
 	chr = 22)
              
