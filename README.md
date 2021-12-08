@@ -1,6 +1,6 @@
 # OWAS `v1.1.0`
 Update 2021.12.1
-1. Add the option for clumping GWAS summary statistics, to aviod high collinearity.
+1. Add the option for clumping GWAS summary statistics, to avoid high collinearity.
 2. Bug fixes.
 
 Update 2021.6.9:
