@@ -1,6 +1,7 @@
-# OWAS `v1.1.0`
-Update 2021.12.1
+# OWAS `v1.2.1`
+Update 2021.12.29
 1. Add the option for clumping GWAS summary statistics, to avoid high collinearity.
+1. Add shrinkage to LD matrices.
 2. Bug fixes.
 
 Update 2021.6.9:
@@ -156,7 +157,7 @@ $ tar -zxvf openness.tar.gz
 Run with R:
 
 ```r
-install.packages('OWAS_1.1.0.tar.gz')
+install.packages('OWAS_1.2.1.tar.gz')
 library(OWAS)
 path0 <- getwd()
 pre.cov(ldpath = paste0(path0, '/1000G_EUR_Phase3_plink/1000G.EUR.QC.'), 
