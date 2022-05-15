@@ -97,6 +97,7 @@ run.owas(ctype=CELLTYPE (required),
 	   trait=NAME_OF_THE_TRAIT (optional, default='test'),
 	   ldpath=PATH_TO_LD_REFERENCE (required), 
 	   path=OUTPUT_DIR (required, and has to be same with the PATH in get.cov),
+	   plinkpath=PATH_TO_PLINK (required),
 	   chr=CHROMOSOME (optional),
 	   plinkpath= PATH_TO_PLINK_software (required))
 ```
@@ -175,6 +176,7 @@ res <- run.owas(ctype = 'Gm12878',
 	gwas=fread(paste0(path0, '/example/summs.txt')),
 	trait='test',
 	ldpath = paste0(path0, '/1000G_EUR_Phase3_plink/1000G.EUR.QC.'), 
+	plinkpath = system('which plink'),
 	path = paste0(path0, '/output/'), 
 	chr = 22)
 	
