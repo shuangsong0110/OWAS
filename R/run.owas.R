@@ -24,7 +24,7 @@ run.owas <- function(ctype,gwas,trait='test',ldpath,path,plinkpath,chr=1:22,clum
     cldat <- gwas[,c('rsid','p')]
     colnames(cldat) <- c('SNP','P')
     write.table(cldat,'clump.txt',quote=F,row.names = F,col.names = T)
-    system(paste0(plinkpath,' --bfile ',ldpath,chr,' --clump clump.txt  --clump-p1 1 --clump-p2 1 --clump-r2 0.99 --clump-kb 5 --out clump --noweb'))
+    system(paste0(plinkpath,' --bfile ',ldpath,chr,' --clump clump.txt  --clump-p1 1 --clump-p2 1 --clump-r2 0.98 --clump-kb 5 --out clump --noweb'))
     clumped_p <- fread(paste0("clump.clumped"),head=T)
     set <- which(gwas$rsid%in%clumped_p$SNP)
     gwas <- gwas[set,]
