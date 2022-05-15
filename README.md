@@ -45,14 +45,14 @@ devtools::install_github('shuangsong0110/OWAS')
 ### Download the pre-computed openness scores:
 
 - Download the precomputed openness scores for 12 ENCODE cell types.
-`wget -O openness.tar.gz https://cloud.tsinghua.edu.cn/f/17d8b0b5de3941a2bf86/?dl=1`
+`wget -O openness.tar.gz https://cloud.tsinghua.edu.cn/f/17d8b0b5de3941a2bf86/?dl=1 --no-check-certificate`
 
 We precomputed openness scores for 12 ENCODE cell types using deltaSVM (Lee et al., 2015, Nature Genetics). 
 
 ### Download the bedfile for segments:
 
 - Download the bedfile:
-`wget -O bedfile_5kb.txt https://cloud.tsinghua.edu.cn/f/7524fb35b88c468dbc02/?dl=1`
+`wget -O bedfile_5kb.txt https://cloud.tsinghua.edu.cn/f/7524fb35b88c468dbc02/?dl=1 --no-check-certificate`
 
 
 For customized opennes scores and segments length, see [Customized Settings](#customized-settings).
