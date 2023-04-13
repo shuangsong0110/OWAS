@@ -36,7 +36,7 @@ devtools::install_github('shuangsong0110/OWAS')
 ### Download the LD reference panel:
 - Download the 1000 Genome Project reference panel (hg19):
 
-`wget https://data.broadinstitute.org/alkesgroup/LDSCORE/1000G_Phase3_plinkfiles.tgz`
+`wget https://zenodo.org/record/7768714/files/1000G_Phase3_plinkfiles.tgz?download=1`
 
 `tar -xvzf 1000G_Phase3_plinkfiles.tgz`
 
