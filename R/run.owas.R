@@ -60,7 +60,7 @@ run.owas <- function(ctype,gwas,trait='test',ldpath,path,plinkpath,chr=1:22,clum
       }
       ldbim <- fread(paste0(ldpath,chr,'.bim'))
       gwas1 <- merge(gwas1,ldbim,by.x='rsid',by.y='V2')
-      sign <- agtc(gwas1$a1,gwas1$a2,gwas1$V5,gwas1$V6)
+      sign <- agtc(gwas1$a1,gwas1$a2,gwas1$V6,gwas1$V5)
       gwas1$z <- gwas1$z*sign
 
       gwas1 <- gwas1[,c('rsid','chr','a1','a2','z','p')]
